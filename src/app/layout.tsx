@@ -27,22 +27,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <nav className="flex justify-between border-2 border-black dark:border-white m-2 ">
-          <Link
-            href="/"
-            className="border-r-2 border-black dark:border-white p-2"
-          >
-            🌱🦠 BioDesign Club
-          </Link>
-          <input
-            type="text"
-            placeholder="Search..."
-            className="flex-grow bg-[#c8cac2] dark:bg-[#c8cac2] focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 p-2"
-          />
-          <div className="flex gap-4 border-l-2 border-black dark:border-white p-2">
-            <Link href="/community">Community</Link>
-            <Link href="/library">Library</Link>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <nav className="m-2 rounded border-2 border-black p-2 dark:border-white">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+            <Link href="/" className="font-semibold sm:mr-2">
+              🌱🦠 BioDesign Club
+            </Link>
+            <input
+              type="text"
+              placeholder="Search..."
+              className="w-full rounded border border-black/20 bg-[#c8cac2] p-2 focus:bg-gray-100 focus:outline-none dark:bg-[#c8cac2] dark:focus:bg-gray-900 sm:flex-grow"
+            />
+            <div className="flex gap-4 text-sm sm:text-base">
+              <Link href="/community">Community</Link>
+              <Link href="/library">Library</Link>
+            </div>
           </div>
         </nav>
         <div className="p-2">{children}</div>
